@@ -1,12 +1,19 @@
-import { Component, ViewChild} from '@angular/core';
+import { Component, ViewChild, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 import { ButtonPropsModel } from '@syncfusion/ej2-angular-popups';
 import { NodeSelection, RichTextEditorComponent } from '@syncfusion/ej2-angular-richtexteditor';
 import { Dialog } from '@syncfusion/ej2-popups';
+import { RichTextEditorModule } from '@syncfusion/ej2-angular-richtexteditor';
+import { ToolbarService, LinkService, ImageService, HtmlEditorService } from '@syncfusion/ej2-angular-richtexteditor';
+import { DialogModule } from '@syncfusion/ej2-angular-popups';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  standalone: true,
+  schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
+  imports: [RichTextEditorModule, DialogModule],
+  providers: [ToolbarService, LinkService, ImageService, HtmlEditorService]
+  // styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'angular-richtexteditor';
