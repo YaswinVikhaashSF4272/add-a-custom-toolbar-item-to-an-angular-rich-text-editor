@@ -13,7 +13,6 @@ import { DialogModule } from '@syncfusion/ej2-angular-popups';
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
   imports: [RichTextEditorModule, DialogModule],
   providers: [ToolbarService, LinkService, ImageService, HtmlEditorService]
-  // styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'angular-richtexteditor';
